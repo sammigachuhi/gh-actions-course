@@ -1,0 +1,14 @@
+name: "My workflows"
+environment: staging
+
+colors: 
+  - name: red
+    hex: ff000g 
+    labels:
+      - experimental
+      - accessibility
+  - name: green
+    hex: gg0099j
+  - name: blue
+    hex: yy7788k
+
