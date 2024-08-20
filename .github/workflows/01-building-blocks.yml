@@ -1,5 +1,5 @@
 name: "01 - Building Blocks"
-on: [push, workflow_dispatch]
+on: [workflow_dispatch]
 
 jobs:
   echo-hello: 
@@ -16,6 +16,7 @@ jobs:
           echo "I will fail"
           echo "I will fail"
           echo "I will fail"
+          echo "work_dispatch only"
           exit 0
           
       - name: Say goodbye
