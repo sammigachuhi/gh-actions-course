@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Failed step
-        if: 
         run: |
           echo "I will fail"
           echo "I will fail"
           echo "I will fail"
+          exit !=0
           
       - name: Say goodbye
         run: echo "Goodbye!"
