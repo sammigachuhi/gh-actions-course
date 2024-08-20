@@ -5,14 +5,14 @@ on:
   pull_request:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 10 ? * * *'
+    - cron: '05 10 * * *'
 
 jobs: 
   echo:
     runs-on: ubuntu-latest
     steps:
     - name: Show the trigger
-      run: echo "${{github.event_name}}"
+      run: echo "Event name: ${{github.event_name}}"
 
 
 
