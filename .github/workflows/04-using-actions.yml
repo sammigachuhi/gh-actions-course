@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Printing Folder 
       run: | 
-        ls -l 
+        echo "Folders: $uses"
 
 
 
