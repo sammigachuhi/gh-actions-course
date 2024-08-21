@@ -9,9 +9,9 @@ jobs:
         steps: 
             - name: "Show OS"
               run: | 
-              echo "This job"
-              echo "is running on"
-              echo "an Ubuntu runner"
+                echo "This job"
+                echo "is running on"
+                echo "an Ubuntu runner"
 
     windows-echo: 
         runs-on: windows-latest 
