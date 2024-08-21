@@ -18,11 +18,13 @@ jobs:
         runs-on: windows-latest 
         steps: 
             - name: "Show OS"
+              shell: bash
               run: | 
                 echo "This job"
                 echo "is running on"
                 echo "a windows runner"
                 echo "Runner OS: $RUNNER_OS"
+                echo "I am running on bash"
 
     mac-echo:
         runs-on: macos-latest 
