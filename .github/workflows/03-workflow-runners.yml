@@ -14,6 +14,25 @@ jobs:
               echo "an Ubuntu runner"
 
     windows-echo: 
+        runs-on: windows-latest 
+        steps: 
+            - name: "Show OS"
+              run: | 
+                echo "This job"
+                echo "is running on"
+                echo "a windows runner"
+
+    mac-echo:
+        runs-on: macos-latest 
+        steps: 
+            - name: "Show OS"
+              run: | 
+                echo "This job is"
+                echo "runnning on a"
+                echo "MacOS runner"
+
+     
+
         
 
 
