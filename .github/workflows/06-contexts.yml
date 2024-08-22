@@ -21,4 +21,4 @@ jobs:
 
         - name: Retrieve Variable 
           run: | 
-            echo "Repository variable value: $MY_VAR"
+            echo "Repository variable value: ${{ vars.MY_VAR }}"
