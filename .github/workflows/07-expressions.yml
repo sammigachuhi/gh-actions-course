@@ -9,6 +9,12 @@ on:
             debug:
                 type: boolean 
                 default: false 
+run-name: >- 
+    if [[ ${{ inputs.debug == true }}]] then; 
+    'ON'
+    else
+    'OFF'
+    fi
 
 jobs:
     echo: 
