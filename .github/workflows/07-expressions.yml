@@ -10,10 +10,10 @@ on:
                 type: boolean 
                 default: false 
 run-name: >- 
-    if [[ ${{ inputs.debug == true }}]] then; 
-    'ON'
+    if [ ${{ inputs.debug == true }}] then; 
+    echo 'ON'
     else
-    'OFF'
+    echo 'OFF'
     fi
 
 jobs:
