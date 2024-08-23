@@ -10,11 +10,7 @@ on:
                 type: boolean 
                 default: false 
 run-name: >- 
-    if [ ${{ inputs.debug == true }}] then; 
-    echo 'ON'
-    else
-    echo 'OFF'
-    fi
+    07 - Using Expressions | DEBUG - ${{ inputs.debug == true && 'ON' || 'OFF'}}
 
 jobs:
     echo: 
