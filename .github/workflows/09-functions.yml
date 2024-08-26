@@ -20,11 +20,9 @@ jobs:
                 echo "Title of pull request: $TITLE"
 
             - name: Print PR Labels 
-              env:
-                LABEL: ${{ github.event.pull_request.labels }}
               run: | 
                 cat << EOF 
-                ${{ toJson( env.LABEL ) }}
+                ${{ toJson(github.event.pull_request.labels) }}
                 EOF
 
             - name: Bug step
