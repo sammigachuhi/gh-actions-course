@@ -13,6 +13,25 @@ jobs:
     echo1:
         runs-on: ubuntu-latest
         steps:
+            - name: Print PR Title
+              env: 
+                TITLE: ${{ github.event.pull_request.title }}
+              run: | 
+                echo "Title of pull request: $TITLE"
+
+            - name: Print PR Labels 
+              env:
+                LABEL: ${{ github.event.pull_request.labels }}
+              run: | 
+                cat << EOF 
+                ${{ toJson( env.LABEL ) }}
+                EOF
+
+            - name: Bug step
+              if: ${{ failure() && contains(github.event.pull_request.labels.*.name, 'fix') }}
+              run: |
+                echo "I am a bug fix."
+
             - name: Sleep for 20 seconds
               run: | 
                 echo "Sleep 20"
